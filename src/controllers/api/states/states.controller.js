@@ -1,5 +1,5 @@
-const statesRepo  = require('../../../lib/statesRepository'),
-      util        = require('util');
+const statesRepo = require('../../../lib/statesRepository'),
+      util = require('util');
 
 class StatesController {
 
@@ -9,20 +9,15 @@ class StatesController {
 
     getStates(req, res) {
         console.log('*** getStates');
-
-        statesRepo.getStates((err, data) => {
+        statesRep.getStates(err, data => {
             if (err) {
-                console.log('*** getStates error: ' + util.inspect(err));
-                res.json({
-                    states: null
-                });
+                console.log('*** getStates error' + util.inspect(err));
             } else {
                 console.log('*** getStates ok');
                 res.json(data);
             }
         });
     }
-
 }
 
 module.exports = StatesController;

@@ -5,6 +5,7 @@ npm-debug.log
 # Code Editor Settings
 .idea
 .vs
+.vscode
 
 # Build Generated Files
 src/public/app/**/*.js
